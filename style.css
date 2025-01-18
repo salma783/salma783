@@ -1,0 +1,20 @@
+body{
+    margin:0;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    background: linear-gradient(rgba(0, 128, 0, 0.428), rgba(255, 255, 255, 0.408));
+    color: black;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    text-shadow: black 1px 0 10px;
+    z-index:1;
+}

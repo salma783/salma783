@@ -1,20 +1,339 @@
-body{
-    margin:0;
+body {
+    margin: 0;
     width: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-header{
-    background: linear-gradient(rgba(0, 128, 0, 0.428), rgba(255, 255, 255, 0.408));
-    color: black;
+    height: 100%;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #355e879a, #50bce083);
+    font-family: "Pacifico";
+    color: #fff;
     text-align: center;
     position: sticky;
-    top: 0;
+    top: 0; /* Sticky header at the top */
     width: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
-    text-shadow: black 1px 0 10px;
-    z-index:1;
-}
+    padding: 20px;
+    font-size: 25px;
+    text-shadow: #101010 1px 0 10px;
+    z-index: 1000;
+    height: 6vh;
+  }
+  
+  nav {
+    width: 40%;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: "Source Code Pro";
+  }
+  
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+  }
+  
+  header a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 4px;
+    background-color: #000000;
+    transition: width 0.3s ease-out;
+  }
+  
+  a:hover::after {
+    width: 90%;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 30px;
+  }
+  
+  .logo h2 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  #home {
+    background: linear-gradient(
+        0deg,
+        rgba(142, 198, 228, 0.599),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("./images/pro.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: #000000 1px 0 10px;
+  }
+  #home h2 {
+    font-size: 1em;
+  }
+  
+  #about {
+    margin: 50px;
+    scroll-margin-top: 220px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0.5px 0.5px 10px grey;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .contactInfo-skills,
+  .about-me {
+    width: 50%;
+  }
+  .about-me p {
+    font-family: "Source Code Pro", sans-serif;
+    /* text-align:center; */
+    padding: 15px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+  .contactInfo {
+    padding-left: 40%;
+    margin-top: 50px;
+    flex-direction: row;
+  }
+  .progression {
+    background-color: rgb(178, 209, 209);
+    border-radius: 5px;
+    animation: typing;
+    flex-direction: right;
+  }
+  .progression-bar {
+    background-color: blue;
+    height: 10px;
+    border-radius: 5px;
+    flex-direction: right;
+  }
+  .skills {
+    padding: 10px;
+    flex-direction: right;
+  }
+  
+  .skill {
+    margin: 20px;
+    flex-direction: right;
+  }
+  .skill-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    flex-direction: right;
+  }
+  .about-me p{
+    font-size: 25px;
+    flex-direction: left;
+  }
+  h3 {
+    font-size: 25px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    width: fit-content;
+  }
+  h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 80%;
+    height: 4px;
+    background-color: #063df3;
+  }
+  #projects {
+    margin: 50px;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 0;
+  }
+  .project-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .project {
+    width: 30%;
+    margin: 1em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px grey;
+    font-family: monospace;
+  }
+  .project:hover {
+    animation: pulse; /* using animation library*/
+    animation-duration: 1s;
+  }
+  .project-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+  }
+  .project-desc {
+    color: rgb(119, 119, 182);
+    padding: 10px;
+  }
+  #contact {
+    background: linear-gradient(rgba(255, 255, 255, 0.27), rgba(0, 0, 255, 0.248)),
+      url("./assets/tech.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 70px;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0.5px 0.5px 10px grey;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 3px;
+  }
+  .contact-form,
+  .get-in-touch {
+    width: 50%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  input,
+  textarea {
+    height: 40px;
+    width: 90%;
+    padding: 15px;
+    margin-block: 10px;
+    border-radius: 3px;
+    border-color: rgba(128, 128, 128, 0.388);
+  }
+  button {
+    margin-top: 30px;
+    width: 90%;
+    height: 50px;
+    color: white;
+    background-color: rgb(54, 54, 148);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: rgb(100, 118, 198);
+  }
+  .get-in-touch {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    line-height: 34px;
+  }
+  
+  .get-in-touch ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap: 6px;
+  }
+  .social {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .social a{
+    text-decoration: none;
+  }
+  .cercle {
+    width: 40px;
+    height: 40px;
+    border: solid 4px rgb(26, 20, 56);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+  .cercle:hover {
+    background-color: rgb(41, 41, 235);
+    color: white;
+  }
+  
+  footer {
+    background-color: rgb(35, 35, 122);
+    text-align: center;
+  }
+  footer p {
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+  }
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 20ch;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  .name-title {
+    overflow: hidden; /* Ensures text is hidden as it's typed */
+    border-right: 3px solid rgb(255, 255, 255); /* Cursor effect */
+    white-space: nowrap;
+    width: 20ch; /* Defines the visible width in characters */
+    animation: typing 8s steps(25) infinite,/* Typing + deleting combined */ 
+    blink 0.9s step-start infinite; /* Blinking cursor */
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    } /* Blinking cursor */
+  }
